@@ -9,17 +9,42 @@ def encode(password):
     return encoded
 
 def decode(password):
-    decoded = ""
+    # Variables
+    password_digits = [*password] # Creates a list with the digits in the password
+    # A dictionary with the password digits and their corresponding encoded values
+    decoded_digits = {
+        "3": "0",
+        "4": "1",
+        "5": "2",
+        "6": "3",
+        "7": "4",
+        "8": "5",
+        "9": "6",
+        "0": "7",
+        "1": "8",
+        "2": "9"
+    }
+    decoded_password = "" # Creates an empty string to store the password
+
+    for digit in password_digits: # Goes through every digit in the list containing the password digits
+        # If the digit is in the dictionary it is encoded and added to the empty string
+        if digit in decoded_digits:
+            decoded_password += decoded_digits[digit]
+
+    # Your code :)
+    '''decoded = ""
     for i in password:
         digit = int(i) - 3
         if digit == -1:
-            digit = 9
+            #digit = 9
         if digit == -2:
             digit = 8
         if digit == -3:
             digit = 7
         decoded += str(digit)
-    return decoded
+    return decoded'''
+
+    return decoded_password
 
 def print_menu():
     print("Menu")
