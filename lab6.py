@@ -31,7 +31,7 @@ def decode(password):
         if digit in decoded_digits:
             decoded_password += decoded_digits[digit]
 
-    # Your code :)
+    # ktran-33's code :)
     '''decoded = ""
     for i in password:
         digit = int(i) - 3
