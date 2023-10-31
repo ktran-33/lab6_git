@@ -1,8 +1,8 @@
-def encode(password):
+def encode(password): # Function that changes password into a super secret one
     encoded = ""
     for i in password:
         digit = int(i) + 3
-        if digit >= 10:
+        if digit >= 10: # If the number is two-digit, just take the ones place
             digit = str(digit)
             digit = digit[1]
         encoded += str(digit)
@@ -46,15 +46,15 @@ def decode(password):
 
     return decoded_password
 
-def print_menu():
+def print_menu(): # Print Menu
     print("Menu")
     print("-------------")
     print("1. Encode\n2. Decode\n3. Quit")
 
 if __name__=="__main__":
-    choice = 4
+    choice = 4 # Just so the loop works
 
-    while choice != 3:
+    while choice != 3: # This is the exit option
         print_menu()
 
         choice = int(input("Please enter an option: "))
