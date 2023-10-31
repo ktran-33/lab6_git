@@ -31,19 +31,6 @@ def decode(password):
         if digit in decoded_digits:
             decoded_password += decoded_digits[digit]
 
-    # ktran-33's code :)
-    '''decoded = ""
-    for i in password:
-        digit = int(i) - 3
-        if digit == -1:
-            #digit = 9
-        if digit == -2:
-            digit = 8
-        if digit == -3:
-            digit = 7
-        decoded += str(digit)
-    return decoded'''
-
     return decoded_password
 
 def print_menu(): # Print Menu
